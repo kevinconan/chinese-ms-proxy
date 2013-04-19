@@ -206,11 +206,17 @@ namespace MSProxy
                 m_StatusLabel.Text = "服务器连接失败";
                 return;
             }
-            ProxyTcp.IP = m_TboxIP.Text;
+            if (m_TboxIP.Text != "127.0.0.1")
+            {ProxyTcp.IP = m_TboxIP.Text;
             if (!StartProxy())
             { m_StatusLabel.Text = "开启失败"; return; };
             m_isStart = true;
-            m_StatusLabel.Text = "代理正在工作";
+            m_StatusLabel.Text = "代理正在工作";}
+            else
+            {
+                m_StatusLabel.Text = "直接打开本地服务器成功";
+            }
+            
             Process Maple = new Process();
             Maple.StartInfo.FileName = m_filepath;
             Maple.StartInfo.Arguments = "221.231.130.70" + " " + m_TboxLoginPort.Text;
@@ -267,7 +273,7 @@ namespace MSProxy
 
         private void m_BtnAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("本软件协议为MIT,作者邮箱nowind@foxmail.com\n使用前建立ip为221.231.130.70的环回网卡\n本地服务器无须使用转发", "关于");
+            MessageBox.Show("本软件协议为MIT,作者邮箱nowind@foxmail.com\n使用前建立ip为221.231.130.70的环回网卡\n本地服务器请填写IP为127.0.0.1", "关于");
         }
     }
 }
