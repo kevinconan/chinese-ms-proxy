@@ -147,7 +147,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_labServer.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <metadata name="m_labLofinPort.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -177,7 +177,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_labLofinPort.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="m_statusStrip.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -192,7 +192,7 @@
     <value>准备就绪</value>
   </data>
   <data name="m_statusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 301</value>
+    <value>0, 336</value>
   </data>
   <data name="m_statusStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>222, 22</value>
@@ -228,7 +228,7 @@
     <value>显示更多↓</value>
   </data>
   <data name="m_statusStripMore.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 279</value>
+    <value>0, 314</value>
   </data>
   <data name="m_statusStripMore.Size" type="System.Drawing.Size, System.Drawing">
     <value>222, 22</value>
@@ -254,11 +254,35 @@
   <metadata name="panel1.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="m_BtnAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 135</value>
+  </data>
+  <data name="m_BtnAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
+  <data name="m_BtnAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="m_BtnAbout.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="&gt;&gt;m_BtnAbout.Name" xml:space="preserve">
+    <value>m_BtnAbout</value>
+  </data>
+  <data name="&gt;&gt;m_BtnAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_BtnAbout.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;m_BtnAbout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="m_BtnPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 16</value>
+    <value>15, 135</value>
   </data>
   <data name="m_BtnPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 33</value>
+    <value>72, 30</value>
   </data>
   <data name="m_BtnPath.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -276,7 +300,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_BtnPath.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="m_BtnCheck.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 75</value>
@@ -300,7 +324,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_BtnCheck.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="m_btnStop.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 104</value>
@@ -324,7 +348,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_btnStop.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="m_btnStart.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 104</value>
@@ -348,7 +372,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_btnStart.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="m_TboxLoginPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 77</value>
@@ -372,13 +396,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_TboxLoginPort.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="m_TboxIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 23</value>
   </data>
   <data name="m_TboxIP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 21</value>
+    <value>167, 21</value>
   </data>
   <data name="m_TboxIP.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -396,13 +420,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;m_TboxIP.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 7</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 145</value>
+    <value>204, 176</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -522,7 +546,7 @@
     <value>2</value>
   </data>
   <data name="m_PanExtend.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 158</value>
+    <value>7, 189</value>
   </data>
   <data name="m_PanExtend.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 111</value>
@@ -552,7 +576,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>222, 323</value>
+    <value>222, 358</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
