@@ -133,6 +133,7 @@ namespace MSProxy
         private Object [] ParseStringToPort(String s)
         {
             ArrayList ret=new ArrayList();
+            if (s == "") return ret.ToArray();
             String[] commaSplit = s.Split(',');
             foreach (String i in commaSplit)
             {
@@ -170,12 +171,13 @@ namespace MSProxy
                 { MessageBox.Show("环回网卡没设置正确或者端口被占用(本地服务器无须使用转发功能)"); return false; };
             }
             Object[] ChannelPort = ParseStringToPort(m_TboxChannelPort.Text);
-            foreach (UInt16 i in ChannelPort)
-            {
-                ProxyTcp proxytcp = new ProxyTcp(i);
-                if (!proxytcp.Run())
-                { MessageBox.Show("环回网卡没设置正确或者端口被占用(本地服务器无须使用转发功能)"); return false; };
-            }
+                foreach (UInt16 i in ChannelPort)
+                {
+                    ProxyTcp proxytcp = new ProxyTcp(i);
+                    if (!proxytcp.Run())
+                    { MessageBox.Show("环回网卡没设置正确或者端口被占用(本地服务器无须使用转发功能)"); return false; };
+                }
+            
             object[] ShopPort = ParseStringToPort(m_TboxShopPort.Text);
             if (ShopPort.Length == 1)
             {
@@ -193,10 +195,10 @@ namespace MSProxy
                 return;
             }
             Object[] LoginPort = ParseStringToPort(m_TboxLoginPort.Text);
-            if(LoginPort.Length<1)
+            if ( LoginPort.Length != 1)
             {
-                MessageBox.Show("服务器端口填写失败.");
-                m_StatusLabel.Text="服务器端口填写失败";
+                MessageBox.Show("服务器端口填写错误.");
+                m_StatusLabel.Text = "服务器端口填写错误";
                 return;
             }
             String[] ret = CheckServer(m_TboxIP.Text, (UInt16)LoginPort[0]);
