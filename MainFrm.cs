@@ -40,13 +40,13 @@ namespace MSProxy
         {
             if (m_isExtend)
             {
-                Height = 240;
+                Height = 270;
                 m_PanExtend.Visible = false;
                 m_StatusLabelMore.Text = "显示更多↓";
             }
             else
             {
-                Height = 370;
+                Height = 400;
                 m_PanExtend.Visible = true;
                 m_StatusLabelMore.Text = "变小↑";
             }
@@ -55,7 +55,7 @@ namespace MSProxy
         ///<summary> Load ini </summary>
         private void MSProxyForm_Load(object sender, EventArgs e)
         {
-            Height = 240;
+            Height = 270;
             m_PanExtend.Visible = false;
             StringBuilder sb=new StringBuilder(200);
             GetPrivateProfileString("conf", "ip", "127.0.0.1", sb, 199, "./mxdproxy.conf");
@@ -158,7 +158,6 @@ namespace MSProxy
             }
                 return ret.ToArray();
         }
-        
         private bool StartProxy()
         {
             if(m_isStart)
@@ -168,21 +167,21 @@ namespace MSProxy
             {
                 ProxyTcp proxytcp = new ProxyTcp((UInt16)LoginPort[0]);
                 if (!proxytcp.Run())
-                { MessageBox.Show("环回网卡没设置正确或者端口被占用"); return false; };
+                { MessageBox.Show("环回网卡没设置正确或者端口被占用(本地服务器无须使用转发功能)"); return false; };
             }
             Object[] ChannelPort = ParseStringToPort(m_TboxChannelPort.Text);
             foreach (UInt16 i in ChannelPort)
             {
                 ProxyTcp proxytcp = new ProxyTcp(i);
                 if (!proxytcp.Run())
-                { MessageBox.Show("环回网卡没设置正确或者端口被占用"); return false; };
+                { MessageBox.Show("环回网卡没设置正确或者端口被占用(本地服务器无须使用转发功能)"); return false; };
             }
             object[] ShopPort = ParseStringToPort(m_TboxShopPort.Text);
             if (ShopPort.Length == 1)
             {
                 ProxyTcp proxytcp = new ProxyTcp((UInt16)ShopPort[0]);
                 if (!proxytcp.Run())
-                { MessageBox.Show("环回网卡没设置正确或者端口被占用"); return false; };
+                { MessageBox.Show("环回网卡没设置正确或者端口被占用(本地服务器无须使用转发功能)"); return false; };
             }
             return true;
         }
@@ -264,6 +263,11 @@ namespace MSProxy
             ProxyTcp.CloseAll();
             m_StatusLabel.Text = "代理停止工作";
             }
+        }
+
+        private void m_BtnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("本软件协议为MIT,作者邮箱nowind@foxmail.com\n使用前建立ip为221.231.130.70的环回网卡\n本地服务器无须使用转发", "关于");
         }
     }
 }

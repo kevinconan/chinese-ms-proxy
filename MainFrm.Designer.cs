@@ -47,6 +47,7 @@
             this.m_PanExtend = new System.Windows.Forms.Panel();
             this.m_TboxShopPort = new System.Windows.Forms.TextBox();
             this.m_TboxChannelPort = new System.Windows.Forms.TextBox();
+            this.m_BtnAbout = new System.Windows.Forms.Button();
             m_labServer = new System.Windows.Forms.Label();
             m_labLofinPort = new System.Windows.Forms.Label();
             m_statusStrip = new System.Windows.Forms.StatusStrip();
@@ -99,6 +100,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(this.m_BtnAbout);
             panel1.Controls.Add(this.m_BtnPath);
             panel1.Controls.Add(this.m_BtnCheck);
             panel1.Controls.Add(this.m_btnStop);
@@ -177,6 +179,13 @@
             resources.ApplyResources(this.m_TboxChannelPort, "m_TboxChannelPort");
             this.m_TboxChannelPort.Name = "m_TboxChannelPort";
             // 
+            // m_BtnAbout
+            // 
+            resources.ApplyResources(this.m_BtnAbout, "m_BtnAbout");
+            this.m_BtnAbout.Name = "m_BtnAbout";
+            this.m_BtnAbout.UseVisualStyleBackColor = true;
+            this.m_BtnAbout.Click += new System.EventHandler(this.m_BtnAbout_Click);
+            // 
             // MSProxyForm
             // 
             resources.ApplyResources(this, "$this");
@@ -216,6 +225,7 @@
         private System.Windows.Forms.Panel m_PanExtend;
         private System.Windows.Forms.Button m_BtnCheck;
         private System.Windows.Forms.Button m_BtnPath;
+        private System.Windows.Forms.Button m_BtnAbout;
     }
 }
 
